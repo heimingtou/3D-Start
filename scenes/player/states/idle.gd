@@ -2,6 +2,7 @@ extends PlayerState
 
 func _enter() -> void:
 	obj.change_animation("idle")
+	obj._reset=false
 
 func _update(_delta: float) -> void:
 	#Control jump

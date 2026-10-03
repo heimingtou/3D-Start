@@ -7,7 +7,8 @@ func _enter() -> void:
 
 func _update(_delta: float):
 	#Control moving
-	control_jump()
+	if obj._reset:
+		control_jump()
 	control_moving()
 	if obj.velocity.y<0: 
 		change_state(fsm.states.fall)

@@ -87,9 +87,10 @@ func jump() -> void:
 	if _reset && not is_on_floor():
 		velocity.y=jump_speed*1.5
 		_reset=false
-	if is_on_floor():
-		_reset=true
-		velocity.y = jump_speed
+		print("nhay doi")
+		return 
+	_reset=true
+	velocity.y = jump_speed
 
 func stop_move() -> void:
 	velocity = Vector3.ZERO
