@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://mbpp1vxjjmsj"]
+
+[ext_resource type="PackedScene" uid="uid://bdxjduova28d8" path="res://scenes/player/player.tscn" id="1_m7npr"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_jpyye"]
+size = Vector3(24, 1, 24)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_jpyye"]
+size = Vector3(24, 1, 24)
+
+[node name="Test" type="Node3D" unique_id=1207513010]
+
+[node name="World" type="Node3D" parent="." unique_id=301081876]
+
+[node name="Ground" type="MeshInstance3D" parent="World" unique_id=1678485189]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+mesh = SubResource("BoxMesh_jpyye")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="World/Ground" unique_id=1041114048]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="World/Ground/StaticBody3D" unique_id=1338910257]
+shape = SubResource("BoxShape3D_jpyye")
+
+[node name="Player" parent="." unique_id=942588545 instance=ExtResource("1_m7npr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 4)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1588094629]
+transform = Transform3D(0.81915206, 0.4698463, -0.32898995, 0, 0.57357645, 0.81915206, 0.57357645, -0.6710101, 0.46984634, 0.5345583, 9.431283, 2.7684011)
+shadow_enabled = true
