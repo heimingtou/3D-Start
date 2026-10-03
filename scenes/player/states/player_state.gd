@@ -17,10 +17,14 @@ func _update(delta: float) -> void:
 func control_moving() -> bool:
 	var input: Vector2 = Input.get_vector("left", "right", "up", "down")
 	var is_moving: bool = input.length() > 0.1
+	if Input.is_action_just_released("movement_speed"):
+		obj._multi=1
 	if is_moving:
+		if Input.is_action_just_pressed("movement_speed"):
+			obj._multi=1.6
 		obj.change_direction(BaseCharacter.direction_from_input(input))
-		obj.velocity.x = obj.movement_speed * input.x
-		obj.velocity.z = obj.movement_speed * input.y
+		obj.velocity.x = obj.movement_speed * input.x*obj._multi
+		obj.velocity.z = obj.movement_speed * input.y*obj._multi
 		if obj.is_on_floor():
 			change_state(fsm.states.run)
 		return true

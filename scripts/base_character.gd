@@ -33,7 +33,7 @@ var _next_animation = null
 var _next_direction: String = "down"
 var _played_direction: String = ""
 var _reset: bool=false
-
+var _multi: float=1.0
 
 func _ready() -> void:
 	_next_direction = direction
