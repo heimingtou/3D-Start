@@ -4,7 +4,32 @@
 [ext_resource type="MeshLibrary" uid="uid://b5fe0kjosmo7d" path="res://assets/meshes/block_library.meshlib" id="2_ua5ty"]
 [ext_resource type="MeshLibrary" uid="uid://bq7djra5o7euk" path="res://assets/meshes/object_library.meshlib" id="3_61w3m"]
 [ext_resource type="PackedScene" uid="uid://bdxjduova28d8" path="res://scenes/player/player.tscn" id="4_ua5ty"]
+[ext_resource type="Script" uid="uid://bq3vfkkq2pxx2" path="res://levels/directional_light_3d.gd" id="5_8hd6v"]
 [ext_resource type="PackedScene" uid="uid://b5lfjnonapjlx" path="res://scenes/objects/tree.tscn" id="5_61w3m"]
+[ext_resource type="PackedScene" path="res://scenes/objects/sea_water.tscn" id="6_pdpul"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_78o6w"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_j6mgk"]
+noise = SubResource("FastNoiseLite_78o6w")
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ljh7b"]
+sky_top_color = Color(0.33183005, 0.9414779, 0.90833163, 1)
+sky_horizon_color = Color(0.86504203, 0.9309246, 0.96857667, 1)
+sky_curve = 0.0530332
+sky_cover = SubResource("NoiseTexture2D_j6mgk")
+ground_horizon_color = Color(0.9365946, 0.8453882, 0.7588402, 1)
+
+[sub_resource type="Sky" id="Sky_orua6"]
+sky_material = SubResource("ProceduralSkyMaterial_ljh7b")
+
+[sub_resource type="Environment" id="Environment_jpyye"]
+background_mode = 2
+sky = SubResource("Sky_orua6")
+ambient_light_source = 3
+ambient_light_color = Color(1, 1, 1, 1)
+ambient_light_sky_contribution = 0.53
+ambient_light_energy = 0.72
 
 [node name="Stage" type="Node3D" unique_id=2137543505]
 
@@ -37,7 +62,11 @@ slide_gravity = 1.0
 max_slide_speed = -4.0
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1771557476]
-transform = Transform3D(1, 0, 0, 0, 0.7071068, 0.7071068, 0, -0.7071068, 0.7071068, 0, 32, 22)
+transform = Transform3D(0.81915206, 0.4698463, -0.32898995, 0, 0.57357645, 0.81915206, 0.57357645, -0.6710101, 0.46984634, 22, 32, 25)
+light_color = Color(0.7146291, 0.71462905, 0.71462905, 1)
+light_energy = 0.35
+shadow_enabled = true
+script = ExtResource("5_8hd6v")
 
 [node name="Tree" parent="." unique_id=1564551038 instance=ExtResource("5_61w3m")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22, 2, 18)
@@ -50,3 +79,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 2, 26)
 
 [node name="Tree4" parent="." unique_id=1830569718 instance=ExtResource("5_61w3m")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 2, 10)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=97064000]
+environment = SubResource("Environment_jpyye")
+
+[node name="SeaWater" parent="." unique_id=349472220 instance=ExtResource("6_pdpul")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, -3, 16)

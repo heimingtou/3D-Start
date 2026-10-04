@@ -54,5 +54,5 @@ script = ExtResource("5_5gtgg")
 script = ExtResource("6_h17s1")
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=266852831]
-transform = Transform3D(1, 0, 0, 0, 0.70710677, 0.70710677, 0, -0.70710677, 0.70710677, 0, 30, 30)
+transform = Transform3D(1, 0, 0, 0, 0.7071068, 0.7071068, 0, -0.7071068, 0.7071068, 0, 30, 30)
 current = true
