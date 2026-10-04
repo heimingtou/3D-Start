@@ -15,10 +15,10 @@ func _process(delta: float) -> void:
 func fade_light(from_color: Color, to_color: Color, duration: float) -> void:
 	var tween = create_tween()
 	
-	# Vì script nằm trong DirectionalLight3D, ta dùng trực tiếp thuộc tính "light_color"
+	
 	tween.tween_property(self, "light_color", to_color, duration)
 	
-	# Khi chạy xong chiều này, tự động đảo ngược lại chiều kia
+
 	tween.finished.connect(func():
 		fade_light(to_color, from_color, duration)
 	)
