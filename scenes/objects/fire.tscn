@@ -1,0 +1,155 @@
+[gd_scene format=3 uid="uid://d2dy3rqhsng82"]
+
+[ext_resource type="Texture2D" uid="uid://dgfnx4qurwyro" path="res://assets/models/map/Group 7 - 4_1.png" id="1_pbedp"]
+[ext_resource type="Texture2D" uid="uid://bb26jv7b6otll" path="res://assets/models/map/Group 7 - 4_2.png" id="2_ykw6h"]
+[ext_resource type="Texture2D" uid="uid://bpn4khwobn6mg" path="res://assets/models/map/Group 7 - 4_3.png" id="3_8rc5q"]
+[ext_resource type="Texture2D" uid="uid://cip3ib20ypu5k" path="res://assets/models/map/Group 7 - 4_4.png" id="4_wlceo"]
+[ext_resource type="Texture2D" uid="uid://d0e1cwr5gkx1h" path="res://assets/models/map/Group 7 - 4_5.png" id="5_0decy"]
+[ext_resource type="Texture2D" uid="uid://c3a03lygmgy33" path="res://assets/models/map/Group 7 - 4_6.png" id="6_76m7v"]
+[ext_resource type="Texture2D" uid="uid://cfhh4a5pwehlo" path="res://assets/models/map/Group 7 - 4_7.png" id="7_l6gij"]
+[ext_resource type="Texture2D" uid="uid://cu148rkxvqrb5" path="res://assets/models/map/Group 7 - 4_8.png" id="8_cgsbd"]
+[ext_resource type="Texture2D" uid="uid://bgwrg1r33tnej" path="res://assets/models/map/Group 7 - 4_9.png" id="9_4xnb3"]
+[ext_resource type="Texture2D" uid="uid://cr78dvuqsv3d3" path="res://assets/models/map/Group 7 - 4_10.png" id="10_8yufn"]
+[ext_resource type="Texture2D" uid="uid://cdofwhm6rj4qf" path="res://assets/models/map/Group 7 - 4_11.png" id="11_kbe4c"]
+[ext_resource type="Texture2D" uid="uid://kjk4cxwfx13l" path="res://assets/models/map/Group 7 - 4_12.png" id="12_bggbk"]
+[ext_resource type="Texture2D" uid="uid://5dylcwk7jyyr" path="res://assets/models/map/Group 7 - 4_13.png" id="13_asyc6"]
+[ext_resource type="Texture2D" uid="uid://dogs1am2qlh6a" path="res://assets/models/map/Group 7 - 4_14.png" id="14_2jfx3"]
+[ext_resource type="Texture2D" uid="uid://daifcqqr35us4" path="res://assets/models/map/Smoke 2_1.png" id="15_poq65"]
+[ext_resource type="Texture2D" uid="uid://dukjyti7ckadq" path="res://assets/models/map/Smoke 2_2.png" id="16_3jsue"]
+[ext_resource type="Texture2D" uid="uid://m7g0nl5oukob" path="res://assets/models/map/Smoke 2_3.png" id="17_f0i1t"]
+[ext_resource type="Texture2D" uid="uid://c1rp0cn5vdal" path="res://assets/models/map/Smoke 2_4.png" id="18_4h6ar"]
+[ext_resource type="Texture2D" uid="uid://nwkvfxpit7p2" path="res://assets/models/map/Smoke 2_5.png" id="19_dkjt2"]
+[ext_resource type="Texture2D" uid="uid://b8dgpsnbbqcwq" path="res://assets/models/map/Smoke 2_6.png" id="20_3l52o"]
+[ext_resource type="Texture2D" uid="uid://bgybtn0hyq83u" path="res://assets/models/map/Smoke 2_7.png" id="21_p1ls3"]
+[ext_resource type="Texture2D" uid="uid://cufyvo0rl21w2" path="res://assets/models/map/Smoke 2_8.png" id="22_7jey3"]
+[ext_resource type="Texture2D" uid="uid://cefpflx8f8ued" path="res://assets/models/map/Smoke 2_9.png" id="23_rx266"]
+[ext_resource type="Texture2D" uid="uid://cqbdrstl6vyel" path="res://assets/models/map/Smoke 2_10.png" id="24_iq26i"]
+[ext_resource type="Texture2D" uid="uid://c5ehojik7xo18" path="res://assets/models/map/Smoke 2_11.png" id="25_xgt3j"]
+[ext_resource type="Texture2D" uid="uid://x38f600m5y8x" path="res://assets/models/map/Smoke 2_12.png" id="26_w01ao"]
+[ext_resource type="Texture2D" uid="uid://be6yv680f8vnc" path="res://assets/models/map/Smoke 2_13.png" id="27_85gji"]
+[ext_resource type="Texture2D" uid="uid://k7o4vyx5lf1d" path="res://assets/models/map/Smoke 2_14.png" id="28_4wafx"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jpyye"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_pbedp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_ykw6h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_8rc5q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_wlceo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_0decy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_76m7v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_l6gij")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_cgsbd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_4xnb3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_8yufn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_kbe4c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_bggbk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_asyc6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_2jfx3")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_o88mx"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_orua6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("15_poq65")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_3jsue")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_f0i1t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_4h6ar")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_dkjt2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_3l52o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_p1ls3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_7jey3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_rx266")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_iq26i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_xgt3j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_w01ao")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_85gji")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_4wafx")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Fire" type="StaticBody3D" unique_id=1535107059]
+
+[node name="fire" type="AnimatedSprite3D" parent="." unique_id=449709978]
+pixel_size = 0.0625
+billboard = 1
+texture_filter = 0
+sprite_frames = SubResource("SpriteFrames_jpyye")
+autoplay = "default"
+frame_progress = 0.30798972
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1585780654]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)
+shape = SubResource("CylinderShape3D_o88mx")
+
+[node name="smoke" type="AnimatedSprite3D" parent="." unique_id=864455092]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
+pixel_size = 0.0625
+billboard = 1
+texture_filter = 0
+sprite_frames = SubResource("SpriteFrames_orua6")
+autoplay = "default"
+frame_progress = 0.043740273

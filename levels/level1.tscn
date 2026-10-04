@@ -7,6 +7,7 @@
 [ext_resource type="Script" uid="uid://bq3vfkkq2pxx2" path="res://levels/directional_light_3d.gd" id="5_8hd6v"]
 [ext_resource type="PackedScene" uid="uid://b5lfjnonapjlx" path="res://scenes/objects/tree.tscn" id="5_61w3m"]
 [ext_resource type="PackedScene" path="res://scenes/objects/sea_water.tscn" id="6_pdpul"]
+[ext_resource type="PackedScene" uid="uid://d2dy3rqhsng82" path="res://scenes/objects/fire.tscn" id="8_045es"]
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_78o6w"]
 
@@ -27,9 +28,47 @@ sky_material = SubResource("ProceduralSkyMaterial_ljh7b")
 background_mode = 2
 sky = SubResource("Sky_orua6")
 ambient_light_source = 3
-ambient_light_color = Color(1, 1, 1, 1)
+ambient_light_color = Color(0.2469503, 0.2469503, 0.2469503, 1)
 ambient_light_sky_contribution = 0.53
 ambient_light_energy = 0.72
+
+[sub_resource type="Animation" id="Animation_8hd6v"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:light_energy")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
+
+[sub_resource type="Animation" id="Animation_045es"]
+resource_name = "light"
+length = 0.15
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:light_energy")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.15),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [1.0, 1.6]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_omn1t"]
+_data = {
+&"RESET": SubResource("Animation_8hd6v"),
+&"light": SubResource("Animation_045es")
+}
 
 [node name="Stage" type="Node3D" unique_id=2137543505]
 
@@ -62,8 +101,7 @@ slide_gravity = 1.0
 max_slide_speed = -4.0
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1771557476]
-transform = Transform3D(0.81915206, 0.4698463, -0.32898995, 0, 0.57357645, 0.81915206, 0.57357645, -0.6710101, 0.46984634, 22, 32, 25)
-light_color = Color(0.7146291, 0.71462905, 0.71462905, 1)
+transform = Transform3D(0.17364822, 0.80670726, -0.56486255, 0, 0.57357645, 0.81915206, 0.9848077, -0.1422443, 0.09960053, 22, 32, 25)
 light_energy = 0.35
 shadow_enabled = true
 script = ExtResource("5_8hd6v")
@@ -85,3 +123,15 @@ environment = SubResource("Environment_jpyye")
 
 [node name="SeaWater" parent="." unique_id=349472220 instance=ExtResource("6_pdpul")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, -3, 16)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=1025358946]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 2, 11)
+shadow_enabled = true
+omni_range = 6.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="OmniLight3D" unique_id=1404211013]
+libraries/ = SubResource("AnimationLibrary_omn1t")
+autoplay = &"light"
+
+[node name="Fire" parent="." unique_id=1535107059 instance=ExtResource("8_045es")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 3, 11)
