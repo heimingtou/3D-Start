@@ -9,6 +9,9 @@ func _enter() -> void:
 	pass
 
 func _update(_delta: float) -> void:
+	if obj.is_on_wall():
+		change_state(fsm.states.slide)
+		return
 	coyote_time-=_delta
 	#Control moving
 	var is_moving: bool =control_moving()

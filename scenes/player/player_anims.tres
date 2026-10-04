@@ -468,6 +468,22 @@ tracks/1/keys = {
 "values": [false]
 }
 
+[sub_resource type="Animation" id="Animation_fe31a"]
+resource_name = "slide"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite3D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [13]
+}
+
 [resource]
 _data = {
 &"RESET": SubResource("Animation_kthxi"),
@@ -486,5 +502,6 @@ _data = {
 &"run_down": SubResource("Animation_20dl8"),
 &"run_left": SubResource("Animation_m301a"),
 &"run_right": SubResource("Animation_wdqv8"),
-&"run_up": SubResource("Animation_4xqri")
+&"run_up": SubResource("Animation_4xqri"),
+&"slide": SubResource("Animation_fe31a")
 }

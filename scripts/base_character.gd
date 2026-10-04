@@ -21,6 +21,9 @@ const OPPOSITE_DIRECTION: Dictionary = {
 @export var movement_speed: float = 6.0
 @export var gravity: float = 24.0
 @export var direction: String = "down"
+@export var slide_gravity: float = 20.0      # Trọng lực khi bám tường (rất nhỏ để nhân vật trôi chậm)
+@export var max_slide_speed: float = 8.0     # Tốc độ rơi tối đa khi đang trượt tường
+
 
 var jump_speed: float = 12.0
 var fsm: FSM = null
@@ -40,7 +43,7 @@ func _ready() -> void:
 
 func _physics_process(delta: float) -> void:
 	_check_changed_animation()
-
+	
 	if fsm != null:
 		fsm._update(delta)
 	_update_movement(delta)

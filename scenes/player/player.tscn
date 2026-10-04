@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://uwbxwrgrmmou" path="res://scenes/player/player.gd" id="1_75vfm"]
 [ext_resource type="AnimationLibrary" uid="uid://bxn6hb7ky7gfi" path="res://scenes/player/player_anims.tres" id="2_dovo2"]
 [ext_resource type="Script" uid="uid://bytwgpxy1wbb3" path="res://scenes/player/states/idle.gd" id="3_0owmy"]
+[ext_resource type="Script" uid="uid://bf2rn4xssvtbw" path="res://scenes/player/states/slide.gd" id="4_0owmy"]
 [ext_resource type="Script" uid="uid://dpcr7kcoh7xdh" path="res://scenes/player/states/jump.gd" id="4_qek5x"]
 [ext_resource type="Script" uid="uid://kx1fr4p8vy0f" path="res://scenes/player/states/run.gd" id="5_5gtgg"]
 [ext_resource type="Script" uid="uid://cqn00yvsknulb" path="res://scenes/player/states/fall.gd" id="6_h17s1"]
@@ -19,7 +20,7 @@ metadata/_custom_type_script = "uid://clw03abs2j8ss"
 [node name="Sprite3D" type="Sprite3D" parent="." unique_id=1323366286]
 offset = Vector2(0, 22)
 pixel_size = 0.0625
-billboard = 1
+billboard = 2
 shaded = true
 alpha_cut = 1
 texture_filter = 0
@@ -40,6 +41,9 @@ libraries/ = ExtResource("2_dovo2")
 [node name="Idle" type="Node" parent="State" unique_id=1756615511]
 script = ExtResource("3_0owmy")
 
+[node name="Slide" type="Node" parent="State" unique_id=1454399655]
+script = ExtResource("4_0owmy")
+
 [node name="Jump" type="Node" parent="State" unique_id=676193232]
 script = ExtResource("4_qek5x")
 
@@ -50,5 +54,5 @@ script = ExtResource("5_5gtgg")
 script = ExtResource("6_h17s1")
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=266852831]
-transform = Transform3D(1, 0, 0, 0, 0.68560845, 0.72797054, 0, -0.72797054, 0.68560845, 2.5482998, 10.771366, 30)
+transform = Transform3D(1, 0, 0, 0, 0.70710677, 0.70710677, 0, -0.70710677, 0.70710677, 0, 30, 30)
 current = true

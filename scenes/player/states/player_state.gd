@@ -41,3 +41,9 @@ func control_jump() -> bool:
 		change_state(fsm.states.jump)
 		return true
 	return false
+	
+func control_slide()->bool:
+	if obj.is_on_wall():
+		change_state(fsm.states.slide)
+		return true
+	return false
