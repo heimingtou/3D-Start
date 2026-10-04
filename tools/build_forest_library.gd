@@ -81,8 +81,13 @@ func _run() -> void:
 ## Trimesh you clicked by hand. Run the game, then come back here: one kind of model cannot
 ## use a trimesh. See the "Chạy thử: Cáo kẹt ở chân thang" section of the guide.
 func _shape_for(item_name: String, mesh: Mesh) -> Array:
+	if item_name.begins_with("stair_") and not item_name.begins_with("stair_beside"):
+		var box := BoxShape3D.new()
+		box.size = Vector3(2.0, 2.0, 2.0 * sqrt(2.0))
+		var tf := Transform3D(Basis(Vector3.RIGHT, deg_to_rad(45.0)),
+		Vector3(0.0, -sqrt(2.0) / 2.0, -sqrt(2.0) / 2.0))
+		return [box, tf, "nem 45° (hộp xoay)"]
 	return [mesh.create_trimesh_shape(), Transform3D.IDENTITY, "trimesh"]
-
 
 func _load_mesh(path: String) -> Mesh:
 	var scene: PackedScene = load(path)
