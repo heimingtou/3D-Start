@@ -3,12 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://b2r6ihyqi3scx"
-valid=false
+uid="uid://bujoyh3cjkxfq"
+path="res://.godot/imported/stone_tallD.glb-9b305c983dff3f375582ef486dbc09c5.scn"
 
 [deps]
 
-source_file="res://assets/models/map/tree.glb"
+source_file="res://assets/models/map/stone_tallD.glb"
+dest_files=["res://.godot/imported/stone_tallD.glb-9b305c983dff3f375582ef486dbc09c5.scn"]
 
 [params]
 
@@ -40,9 +41,14 @@ materials/extract_format=0
 materials/extract_path=""
 _subresources={
 "meshes": {
-"tree_tree": {
+"stone_tallD_Mesh stone_tallD": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
 "save_to_file/enabled": true,
-"save_to_file/path": "asset/model/map/tree.tres"
+"save_to_file/fallback_path": "res://assets/models/map/stone.tres",
+"save_to_file/path": "uid://d4kqbslja35wd"
 }
 }
 }

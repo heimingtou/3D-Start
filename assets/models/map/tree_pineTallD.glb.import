@@ -3,12 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://b2r6ihyqi3scx"
-valid=false
+uid="uid://camwfjxmgjv07"
+path="res://.godot/imported/tree_pineTallD.glb-74bc2468fc6b96c8381df04ec4cc5e25.scn"
 
 [deps]
 
-source_file="res://assets/models/map/tree.glb"
+source_file="res://assets/models/map/tree_pineTallD.glb"
+dest_files=["res://.godot/imported/tree_pineTallD.glb-74bc2468fc6b96c8381df04ec4cc5e25.scn"]
 
 [params]
 
@@ -40,9 +41,14 @@ materials/extract_format=0
 materials/extract_path=""
 _subresources={
 "meshes": {
-"tree_tree": {
+"tree_pineTallD_Mesh tree_pineTallD": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
 "save_to_file/enabled": true,
-"save_to_file/path": "asset/model/map/tree.tres"
+"save_to_file/fallback_path": "res://assets/models/map/tree_tall.tres",
+"save_to_file/path": "uid://bk5yqevmpvnfd"
 }
 }
 }
