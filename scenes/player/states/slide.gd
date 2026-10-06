@@ -12,7 +12,7 @@ func _enter() -> void:
 func _update(_delta: float) -> void:
 	#Control moving
 	var is_moving: bool =control_moving()
-	
+	control_jump()
 	if not obj.is_on_wall():
 		change_state(fsm.states.fall)
 		return

@@ -87,12 +87,17 @@ func turn_down() -> void:
 	_next_direction = "down"
 
 func jump() -> void:
+	var wall_nor=get_wall_normal()
+	if is_on_wall():
+		velocity.x=wall_nor.x*movement_speed*10.0
+		velocity.z=wall_nor.z*movement_speed*10.0
 	if _reset && not is_on_floor():
 		velocity.y=jump_speed*1.5
 		_reset=false
 		print("nhay doi")
 		return 
 	_reset=true
+	
 	velocity.y = jump_speed
 
 func stop_move() -> void:
