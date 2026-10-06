@@ -83,7 +83,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 2, 10)
 environment = SubResource("Environment_jpyye")
 
 [node name="SeaWater" parent="." unique_id=349472220 instance=ExtResource("6_pdpul")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, -1, 16)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 0.6298218, 16)
 
 [node name="Fire" parent="." unique_id=1535107059 instance=ExtResource("8_045es")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 3, 17)
